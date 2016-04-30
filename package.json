@@ -1,0 +1,24 @@
+{
+  "name": "pupa-theme",
+  "version": "1.0.0",
+  "description": "A hexo theme for my site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/xwartz/pupa-theme.git"
+  },
+  "keywords": [
+    "hexo",
+    "theme",
+    "pupa"
+  ],
+  "author": "xwartz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xwartz/pupa-theme/issues"
+  },
+  "homepage": "https://github.com/xwartz/pupa-theme#readme"
+}
