@@ -57,6 +57,6 @@ mixin post(item)
                 div.entry-tags
                     if item.tags && item.tags.length
                         - item.tags.each(function(tag){
-                            a.tag(href='url_for(tag.path)')
+                            a.tag(href=url_for(tag.path))
                                 != tag.name
                         - })
