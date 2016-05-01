@@ -4,10 +4,14 @@ mixin home()
     .paginator
         if page.prev
             a.previous(href=url_for(prev))!= __('prev')
+        else
+            a.previous(class='disabled' href='javascript:;')!= __('prev')
+        em
+            != page.current
         if page.next
-            em
-              page.current
             a.next(href=url_for(next))!= __('next')
+        else
+            a.next(class='disabled' href='javascript:;')!= __('next')
 
 mixin post()
     - var prev = page.prev ? page.prev.path : false;
@@ -15,6 +19,10 @@ mixin post()
     .paginator
         if prev
             a.previous(href=url_for(prev))!= __('prev_post')
+        else
+           a.previous(class='disabled' href='javascript:;')!= __('prev_post')
+        em
         if next
-            em
             a.next(href=url_for(next))!= __('next_post')
+        else
+            a.next(class='disabled' href='javascript:;')!= __('next_post')
