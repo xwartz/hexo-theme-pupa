@@ -1,0 +1,20 @@
+mixin home()
+    - var prev = page.prev_link
+    - var next = page.next_link
+    .paginator
+        if page.prev
+            a.previous(href=url_for(prev))!= __('prev')
+        if page.next
+            em
+              page.current
+            a.next(href=url_for(next))!= __('next')
+
+mixin post()
+    - var prev = page.prev ? page.prev.path : false;
+    - var next = page.next ? page.next.path : false;
+    .paginator
+        if prev
+            a.previous(href=url_for(prev))!= __('prev_post')
+        if next
+            em
+            a.next(href=url_for(next))!= __('next_post')

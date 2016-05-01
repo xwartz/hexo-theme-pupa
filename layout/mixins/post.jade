@@ -1,0 +1,62 @@
+mixin postInfo(item)
+    .entry-meta
+        time.updated(itemprop='datePublished' datetime=full_date(item.updated, 'dddd, MMMM Do YYYY, h:mm:ss a'))
+            != full_date(item.updated, 'll')
+
+//- Index Page
+mixin posts()
+    div.entry-header
+        div.container
+            h1.entry-title
+                != config.title
+            p.entry-description
+                != config.description
+    ul.entry-list
+        - page.posts.each(function (item) {
+            li.entry-item(itemscope='' itemtype='http://schema.org/Article')
+                article
+                    h2.post-name(itemprop='name')
+                        a(href= url_for(item.path) itemprop='url')
+                            != item.title
+                    +postInfo(item)
+                    .description.post-content(itemprop='description')
+                        != item.excerpt
+                    a.read-more(href= url_for(item.path))!= __('more')
+        - })
+
+//- Archive Page
+mixin postList()
+    .archive-list
+        - var year = 0;
+        - var change = false;
+        - page.posts.each(function (item) {
+            - var itemYear = date(item.date, 'YYYY') - 0;
+            - change = year !== itemYear;
+            - year = change ? itemYear : year;
+            if change
+                div.entry-year!= year
+            .entry-item
+                time
+                    != full_date(item.updated, 'YYYY-MM-DD')
+                a(href= url_for(item.path))
+                    != item.title
+        - })
+
+//- Post Page
+mixin post(item)
+    .post
+        article.hentry(itemscope='' itemtype='http://schema.org/Article')
+            div.entry-header
+                div.container
+                    h1.entry-title
+                        != item.title
+                    +postInfo(item)
+            .entry-content.container(itemprop='articleBody')
+                != item.content
+            div.entry-extra.container
+                div.entry-tags
+                    if item.tags && item.tags.length
+                        - item.tags.each(function(tag){
+                            a.tag(href='url_for(tag.path)')
+                                != tag.name
+                        - })

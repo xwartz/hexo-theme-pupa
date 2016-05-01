@@ -1,0 +1,29 @@
+menu:
+    Blog: /pupa
+    Archive: /pupa/archives/
+    # Weibo: http://weibo.com/samedie
+    GitHub: https://github.com/xwartz
+    About: http://xwartz.github.io
+    # Rss: /atom.xml
+
+favicon: /logo.png
+logo: /pupa/logo.png
+
+# Comment
+# e.g disqus: seansun
+disqus: stddup
+duoshuo:
+
+# Analytics
+# google-analytics:
+ga: UA-69822347-1
+# baidu-analytics:
+# ba: //hm.baidu.com/hm.js?a36e15d9e2adec9a21fcdd9f686b1ed2
+
+# Copyright Infomation
+startyear: 2015
+
+# Font CDN
+#true : use google fonts api, not stable for chinese visitor sometimes, caused by force majeure factor
+#false: use useso fonts api instead of google's, great response speed for chinese visitor
+googlefonts: false

@@ -1,0 +1,67 @@
+header {
+  padding: 20px 0;
+  border-bottom: 1px solid #f9f9f9;
+
+  .container {
+    max-width: 860px;
+  }
+
+  a {
+    color: #444;
+    font-family: "Avenir Next", "Avenir", "Helvetica Neue", sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  a:hover {
+    opacity: 1;
+    color: #222;;
+  }
+
+}
+
+.brand {
+  float: left;
+  display: inline-block;
+  cursor: pointer;
+
+  &:hover strong {
+    opacity: .8;
+  }
+
+  strong {
+    opacity: .08;
+    color: #444;
+    font-size: 24px;
+    font-weight: 300;
+    vertical-align: top;
+    line-height: 30px;
+    transition: all 0.25s ease-in;
+  }
+
+  a:hover {
+    border-color: #444;
+  }
+
+}
+
+nav {
+  float: right;
+
+  a {
+    font-size: 16px;
+    margin-right: 15px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+
+    &.active {
+      border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    }
+
+  }
+
+}
