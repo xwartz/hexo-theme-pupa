@@ -38,11 +38,10 @@
   }
 
   .read-more {
-    // color: #d45e13;
-    border-color: #d45e13;
+    border-color: $l-color;
     font-size: 16px;
     padding-bottom: 2px;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid $l-color;
   }
 
 }
