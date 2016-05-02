@@ -123,6 +123,7 @@
       position: relative;
       margin: 1em 0;
       &:before {
+          display: none;
           content: "#";
           color: #42b983;
           position: absolute;
@@ -130,6 +131,12 @@
           top: -4px;
           font-size: 1.2em;
           font-weight: bold;
+      }
+
+      &:hover {
+        &:before {
+          display: block;
+        }
       }
   }
   h4, h5, h6 {
