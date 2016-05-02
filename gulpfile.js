@@ -1,6 +1,7 @@
 var gulp = require('gulp')
 var sass = require('gulp-sass')
 var autoprefixer = require('gulp-autoprefixer')
+var plumber = require('gulp-plumber')
 
 var config = {
   src: './source/scss',
@@ -9,6 +10,7 @@ var config = {
 
 gulp.task('sass', function() {
   return gulp.src(config.src + '/main.scss')
+    .pipe(plumber())
     .pipe(sass({
       outputStyle: 'compressed'
     }))
