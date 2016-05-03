@@ -22,25 +22,11 @@ header {
 
 .brand {
   float: left;
-  display: inline-block;
   cursor: pointer;
+  height: 24px;
 
-  &:hover strong {
+  &:hover {
     opacity: .8;
-  }
-
-  strong {
-    opacity: .08;
-    color: #444;
-    font-size: 24px;
-    font-weight: 300;
-    vertical-align: top;
-    line-height: 30px;
-    transition: all 0.25s ease-in;
-  }
-
-  a:hover {
-    border-color: #444;
   }
 
 }
