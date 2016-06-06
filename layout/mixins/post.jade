@@ -1,7 +1,7 @@
 mixin postInfo(item)
     .entry-meta
-        time.updated(itemprop='datePublished' datetime=full_date(item.updated, 'dddd, MMMM Do YYYY, h:mm:ss a'))
-            != full_date(item.updated, 'll')
+        time.updated(itemprop='datePublished' datetime=full_date(item.date, 'dddd, MMMM Do YYYY, h:mm:ss a'))
+            != full_date(item.date, 'll')
 
 //- Index Page
 mixin posts()
@@ -37,7 +37,7 @@ mixin postList()
                 div.entry-year!= year
             .entry-item
                 time
-                    != full_date(item.updated, 'YYYY-MM-DD')
+                    != full_date(item.date, 'YYYY-MM-DD')
                 a(href= url_for(item.path))
                     != item.title
         - })
