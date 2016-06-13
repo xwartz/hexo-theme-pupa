@@ -2,7 +2,7 @@ mixin postInfo(item)
     .entry-meta
         time.updated(itemprop='datePublished' datetime=full_date(item.date, 'dddd, MMMM Do YYYY, h:mm:ss a'))
             != full_date(item.date, 'll')
-        em.post-count= wordcount(item.content)
+        em.post-count= wordcount(item.content) + ' words'
 
 //- Index Page
 mixin posts()
