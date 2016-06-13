@@ -4,6 +4,22 @@
   list-style-type: none;
 }
 
+.entry-meta {
+  font-size: 14px;
+  font-family: "Optima", "Helvetica Neue", sans-serif;
+  color: #999;
+
+  .updated::after {
+    content: " — ";
+  }
+
+  em {
+    font-size: 13px;
+    color: #999;
+  }
+
+}
+
 .entry-list {
 
   .entry-item {
@@ -12,16 +28,6 @@
     min-height: 50px;
   }
 
-  .entry-meta {
-    font-size: 14px;
-    font-family: "Optima", "Helvetica Neue", sans-serif;
-    color: #999;
-  }
-
-  .entry-meta em {
-    font-size: 13px;
-    color: #999;
-  }
 
   h2 {
     margin: 8px 0 12px;

@@ -21,18 +21,6 @@
 
     .entry-meta {
       position: relative;
-      display: block;
-      font-size: 14px;
-      font-family: "Optima", "Helvetica Neue", sans-serif;
-
-      .updated::after {
-          content: " — ";
-      }
-
-      em {
-        font-size: 13px;
-        color: #999;
-      }
     }
 
     .entry-meta .button {
