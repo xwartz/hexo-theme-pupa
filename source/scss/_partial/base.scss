@@ -52,3 +52,8 @@ a:hover {
   width: 24px;
   height: 24px;
 }
+
+figcaption > span {
+  display: block;
+  padding: 5px;
+}
