@@ -1,15 +1,16 @@
-# pupa-theme
+# hexo-pupa-theme
+
+个人使用的博客主题
 
 ![pupa-theme](./screen.png)
 
 ## 安装
 
-``` bash
-hexo init blog && cd blog
-npm i
-npm i --save hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync hexo-generator-archive
-git clone git@github.com:xwartz/pupa-theme.git themes/pupa
+```bash
+npm install
 ```
+
+各种依赖参考[pupa](https://github.com/xwartz/pupa)
 
 ## 启用
 
@@ -19,12 +20,11 @@ git clone git@github.com:xwartz/pupa-theme.git themes/pupa
 theme: pupa
 
 # 在归档页面显示所有文章
-# 需要上面安装的 hexo-generator-archive 插件支持
 archive_generator:
-    per_page: 0
-    yearly: false
-    monthly: false
-    daily: false
+  per_page: 0
+  yearly: false
+  monthly: false
+  daily: false
 ```
 
 ## 更新
