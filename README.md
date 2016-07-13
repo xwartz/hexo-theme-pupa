@@ -2,7 +2,7 @@
 
 个人使用的博客主题
 
-![pupa-theme](./screen.png)
+[在线访问](https://xwartz.github.com/pupa)
 
 ## 安装
 
@@ -10,7 +10,7 @@
 npm install
 ```
 
-各种依赖参考[pupa](https://github.com/xwartz/pupa)
+各种依赖参考 [pupa](https://github.com/xwartz/pupa)
 
 ## 启用
 
