@@ -2,7 +2,8 @@ mixin postInfo(item)
     .entry-meta
         time.updated(itemprop='datePublished' datetime=full_date(item.date, 'dddd, MMMM Do YYYY, h:mm:ss a'))
             != full_date(item.date, 'll')
-        em.post-count= wordcount(item.content) + ' words'
+        em.post-count
+            != wordcount(item.content) + ' words'
 
 //- Index Page
 mixin posts()
@@ -16,12 +17,13 @@ mixin posts()
         - page.posts.each(function (item) {
             li.entry-item(itemscope='' itemtype='http://schema.org/Article')
                 article
+                    +postInfo(item)
                     h2.post-name(itemprop='name')
                         a(href= url_for(item.path) itemprop='url')
                             != item.title
-                    +postInfo(item)
                     .description.post-content(itemprop='description')
-                        != item.excerpt
+                        a(href= url_for(item.path))
+                            != item.excerpt
                     // a.read-more(href= url_for(item.path))!= __('more')
         - })
 
