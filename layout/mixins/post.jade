@@ -22,7 +22,7 @@ mixin posts()
                     +postInfo(item)
                     .description.post-content(itemprop='description')
                         != item.excerpt
-                    a.read-more(href= url_for(item.path))!= __('more')
+                    // a.read-more(href= url_for(item.path))!= __('more')
         - })
 
 //- Archive Page
@@ -51,9 +51,11 @@ mixin post(item)
                 div.container
                     h1.entry-title
                         != item.title
+                    div.entry-description
+                        != item.excerpt
                     +postInfo(item)
             .entry-content.container(itemprop='articleBody')
-                != item.content
+                != item.more
             div.entry-extra.container
                 div.entry-tags
                     if item.tags && item.tags.length
