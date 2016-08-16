@@ -65,3 +65,6 @@ mixin post(item)
                             a.tag(href=url_for(tag.path))
                                 != tag.name
                         - })
+
+        //- aside.fixed(role='navigation')
+        //-   != toc(item.content, { list_number: false })
