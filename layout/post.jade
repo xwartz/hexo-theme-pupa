@@ -9,12 +9,16 @@ block description
 
 block container
     include mixins/post
-    +post(page)
+    if page.layout === 'page'
+      +singPage(page)
+    else
+      +post(page)
 
 block pagination
     include mixins/paginator
     +post()
-    include partial/comment
+    if page.comments !== false
+        include partial/comment
 
 block copyright
     include partial/copyright
