@@ -1,9 +1,8 @@
 menu:
     Home: /pupa
     Archive: /pupa/archives/
-    # Weibo: http://weibo.com/samedie
-    GitHub: https://github.com/xwartz
-    About: http://xwartz.github.io
+    About: /pupa/about/
+    # GitHub: https://github.com/xwartz
     # Rss: /atom.xml
 
 favicon: /logo.png
