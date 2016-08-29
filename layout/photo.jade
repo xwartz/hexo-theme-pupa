@@ -8,14 +8,8 @@ block description
     meta(name="description", content=desc)
 
 block container
-    include mixins/post
-    +post(page)
-
-block pagination
-    include mixins/paginator
-    +post()
-    if page.comments !== false
-        include partial/comment
+    include mixins/photo
+    +photo(page)
 
 block copyright
     include partial/copyright
