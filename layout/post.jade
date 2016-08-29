@@ -10,15 +10,18 @@ block description
 block container
     include mixins/post
     if page.layout === 'page'
-      +singPage(page)
+        +singPage(page)
+    else if page.layout === 'photo'
+        +photo(page)
     else
-      +post(page)
+        +post(page)
 
 block pagination
-    include mixins/paginator
-    +post()
-    if page.comments !== false
-        include partial/comment
+    if page.layout === 'post'
+        include mixins/paginator
+        +post()
+        if page.comments !== false
+            include partial/comment
 
 block copyright
     include partial/copyright
