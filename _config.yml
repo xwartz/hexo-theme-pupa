@@ -1,12 +1,12 @@
 menu:
-    Home: /pupa
-    Archive: /pupa/archives/
-    About: /pupa/about/
+    Home: /
+    Archive: /archives/
+    About: /about/
     # GitHub: https://github.com/xwartz
     # Rss: /atom.xml
 
 favicon: /logo.png
-logo: /pupa/logo.png
+logo: /logo.png
 
 # Comment
 # e.g disqus: seansun
@@ -21,8 +21,3 @@ ga: UA-69822347-1
 
 # Copyright Infomation
 startyear: 2015
-
-# Font CDN
-#true : use google fonts api, not stable for chinese visitor sometimes, caused by force majeure factor
-#false: use useso fonts api instead of google's, great response speed for chinese visitor
-googlefonts: false

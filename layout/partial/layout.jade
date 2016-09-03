@@ -7,7 +7,7 @@ html(lang=config.language prefix='og: http://ogp.me/ns#')
             header
                 section.container
                     a.brand(href=url_for())
-                        img.logo(src=theme.logo)
+                        img.logo(src=url_for(theme.logo))
                     include nav
             section.container
                 block container

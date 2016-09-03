@@ -18,6 +18,6 @@ gulp.task('sass', function() {
     .pipe(gulp.dest(config.dest))
 })
 
-gulp.task('default', ['sass'], function() {
+gulp.task('default', function() {
   gulp.watch(config.src + '/**/*.scss', ['sass'])
 })
