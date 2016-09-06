@@ -4,6 +4,10 @@
 
 [在线访问](https://xwartz.github.com/pupa)
 
+## 预览
+
+![](http://ww1.sinaimg.cn/large/801b780agw1f7jt2qsaosj210i14mtbf.jpg)
+
 ## 安装
 
 ```bash
